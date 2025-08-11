@@ -7,8 +7,8 @@ on:
     branches: [main, develop]
 
 env:
-  AWS_REGION: us-east-1
-  ECR_REPOSITORY: item-exchange
+  AWS_REGION: us-east-1  # Change to your preferred AWS region
+  ECR_REPOSITORY: item-exchange-app
   ECS_SERVICE: item-exchange-service
   ECS_CLUSTER: item-exchange-cluster
 
