@@ -1,0 +1,20 @@
+name: Enterprise CI/CD Pipeline
+
+on:
+  push:
+    branches: [main, master, develop, staging]
+  pull_request:
+    branches: [main, master, develop]
+
+jobs:
+  test:
+    name: Run Tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: Simple test
+        run: echo "Pipeline is working!"
+        
+      - name: List files
+        run: ls -la
