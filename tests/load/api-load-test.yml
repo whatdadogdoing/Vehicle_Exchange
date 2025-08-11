@@ -1,0 +1,23 @@
+config:
+  target: 'http://localhost:5000'
+  phases:
+    - duration: 60
+      arrivalRate: 10
+    - duration: 120
+      arrivalRate: 50
+  processor: "./load-test-functions.js"
+
+scenarios:
+  - name: "API Load Test"
+    weight: 100
+    flow:
+      - get:
+          url: "/api/items"
+      - post:
+          url: "/api/register"
+          json:
+            username: "loadtest"
+            email: "test@example.com"
+            password: "password123"
+            phone: "1234567890"
+            address: "Test Address"
