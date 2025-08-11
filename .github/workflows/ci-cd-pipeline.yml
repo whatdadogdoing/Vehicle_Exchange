@@ -2,9 +2,9 @@ name: Enterprise CI/CD Pipeline
 
 on:
   push:
-    branches: [main, develop, staging]
+    branches: [main, master, develop, staging]
   pull_request:
-    branches: [main, develop]
+    branches: [main, master, develop]
 
 env:
   AWS_REGION: us-east-1  # Change to your preferred AWS region
@@ -108,7 +108,7 @@ jobs:
     name: Build & Push Docker Images
     runs-on: ubuntu-latest
     needs: [security-scan, backend-tests, frontend-tests]
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/staging'
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master' || github.ref == 'refs/heads/staging'
     
     steps:
       - uses: actions/checkout@v3
@@ -160,7 +160,7 @@ jobs:
     name: Deploy to Production
     runs-on: ubuntu-latest
     needs: [build-and-push, deploy-staging]
-    if: github.ref == 'refs/heads/main'
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
     environment: production
     
     steps:
