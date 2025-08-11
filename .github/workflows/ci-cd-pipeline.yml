@@ -76,7 +76,7 @@ jobs:
           export PYTHONPATH=$PYTHONPATH:$(pwd)
           pytest tests/ -v --cov=. --cov-report=xml
         env:
-          DATABASE_URL: postgresql://postgres:postgres@localhost:5432/test_db
+          DATABASE_URL: postgresql://postgres:postgres@postgres:5432/test_db
 
   frontend-tests:
     name: Frontend Tests & Build
@@ -95,6 +95,7 @@ jobs:
         run: |
           cd frontend
           npm ci
+          npm install --save-dev @testing-library/react @testing-library/jest-dom
       
       - name: Run tests
         run: |
