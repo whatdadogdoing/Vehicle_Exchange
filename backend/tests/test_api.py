@@ -12,6 +12,10 @@ from werkzeug.security import generate_password_hash
 
 @pytest.fixture
 def client():
+    # Override environment variables for testing
+    import os
+    os.environ['DATABASE_URL'] = 'sqlite:///:memory:'
+    
     app.config['TESTING'] = True
     app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///:memory:'
     
