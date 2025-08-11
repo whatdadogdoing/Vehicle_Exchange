@@ -48,8 +48,6 @@ jobs:
         run: |
           cd backend
           pytest tests/ -v --cov=. --cov-report=xml
-        env:
-          DATABASE_URL: sqlite:///:memory:
         continue-on-error: true
 
   frontend-tests:
