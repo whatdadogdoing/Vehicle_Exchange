@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise CI/CD Pipeline Workshop</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; line-height: 1.6; color: #333; }
+        .header { background: linear-gradient(135deg, #667eea 0%, #764ba2 100%); color: white; padding: 40px 20px; border-radius: 10px; text-align: center; margin-bottom: 30px; }
+        .module { background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 8px; border-left: 4px solid #007acc; }
+        .module h3 { margin-top: 0; color: #007acc; }
+        .info { background: #e3f2fd; padding: 15px; border-radius: 5px; border-left: 4px solid #2196f3; margin: 20px 0; }
+        pre { background: #f5f5f5; padding: 15px; border-radius: 5px; overflow-x: auto; }
+        code { background: #f1f3f4; padding: 2px 4px; border-radius: 3px; }
+        .btn { display: inline-block; background: #007acc; color: white; padding: 12px 24px; text-decoration: none; border-radius: 5px; margin: 10px 5px; }
+        .btn:hover { background: #005a9e; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background: #f8f9fa; }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>🚀 Enterprise CI/CD Pipeline Workshop</h1>
+        <p>Build a complete enterprise-grade CI/CD pipeline for a full-stack application using AWS services, GitHub Actions, and modern DevOps practices.</p>
+    </div>
+
+    <div class="info">
+        <strong>Workshop Duration:</strong> 4 hours | <strong>Level:</strong> Intermediate | <strong>Cost:</strong> ~$10 USD
+    </div>
+
+    <h2>🎯 What You'll Learn</h2>
+    <ul>
+        <li>✅ Build automated CI/CD pipelines with GitHub Actions</li>
+        <li>✅ Implement security scanning and compliance validation</li>
+        <li>✅ Deploy applications to AWS using containerization</li>
+        <li>✅ Set up monitoring and observability</li>
+        <li>✅ Configure automated rollback mechanisms</li>
+        <li>✅ Optimize costs and performance</li>
+    </ul>
+
+    <h2>📋 Prerequisites</h2>
+    <ul>
+        <li>AWS Account with appropriate permissions</li>
+        <li>GitHub account</li>
+        <li>Basic knowledge of Docker and containerization</li>
+        <li>Understanding of CI/CD concepts</li>
+    </ul>
+
+    <h2>🏗️ Architecture Overview</h2>
+    <pre>
+┌─────────────┐    ┌──────────────┐    ┌─────────────┐
+│   GitHub    │───▶│ GitHub       │───▶│   AWS ECS   │
+│ Repository  │    │ Actions      │    │  Fargate    │
+└─────────────┘    └──────────────┘    └─────────────┘
+       │                   │                   │
+       ▼                   ▼                   ▼
+┌─────────────┐    ┌──────────────┐    ┌─────────────┐
+│  Security   │    │   Testing    │    │ Monitoring  │
+│  Scanning   │    │ & Quality    │    │ & Logging   │
+└─────────────┘    └──────────────┘    └─────────────┘
+    </pre>
+
+    <h2>📚 Workshop Modules</h2>
+
+    <div class="module">
+        <h3>Module 1: Environment Setup</h3>
+        <p>Set up your development environment and verify prerequisites.</p>
+        <a href="./modules/01-environment-setup.html" class="btn">Start Module 1</a>
+    </div>
+
+    <div class="module">
+        <h3>Module 2: Application Overview</h3>
+        <p>Understand the full-stack application architecture and components.</p>
+        <a href="./modules/02-application-overview.html" class="btn">Start Module 2</a>
+    </div>
+
+    <div class="module">
+        <h3>Module 3: Containerization</h3>
+        <p>Create Docker containers for the backend and frontend applications.</p>
+        <a href="./modules/03-containerization.html" class="btn">Start Module 3</a>
+    </div>
+
+    <div class="module">
+        <h3>Module 4: CI/CD Pipeline</h3>
+        <p>Build automated CI/CD pipelines with GitHub Actions.</p>
+        <a href="./modules/04-cicd-pipeline.html" class="btn">Start Module 4</a>
+    </div>
+
+    <div class="module">
+        <h3>Module 5: AWS Infrastructure</h3>
+        <p>Deploy infrastructure using AWS ECS, ECR, and related services.</p>
+        <a href="./modules/05-aws-infrastructure.html" class="btn">Start Module 5</a>
+    </div>
+
+    <h2>🛠️ Technology Stack</h2>
+    <table>
+        <tr><th>Component</th><th>Technology</th><th>Purpose</th></tr>
+        <tr><td>Backend</td><td>Python Flask</td><td>REST API</td></tr>
+        <tr><td>Frontend</td><td>React</td><td>User Interface</td></tr>
+        <tr><td>Database</td><td>PostgreSQL</td><td>Data Storage</td></tr>
+        <tr><td>Cache</td><td>Redis</td><td>Performance</td></tr>
+        <tr><td>Container</td><td>Docker</td><td>Packaging</td></tr>
+        <tr><td>Orchestration</td><td>AWS ECS</td><td>Container Management</td></tr>
+        <tr><td>CI/CD</td><td>GitHub Actions</td><td>Automation</td></tr>
+        <tr><td>Monitoring</td><td>Grafana/Prometheus</td><td>Observability</td></tr>
+    </table>
+
+    <h2>🚀 Getting Started</h2>
+    <ol>
+        <li><strong>Fork this repository</strong> to your GitHub account</li>
+        <li><strong>Clone your fork</strong> locally</li>
+        <li><strong>Follow Module 1</strong> to set up your environment</li>
+        <li><strong>Complete each module</strong> in sequence</li>
+    </ol>
+
+    <div class="info">
+        <strong>Ready to start?</strong> → <a href="./modules/01-environment-setup.html" class="btn">Begin with Module 1: Environment Setup</a>
+    </div>
+
+    <h2>📞 Support</h2>
+    <ul>
+        <li>📧 <strong>Email:</strong> workshop-support@example.com</li>
+        <li>💬 <strong>Slack:</strong> #enterprise-cicd-workshop</li>
+        <li>📖 <strong>Documentation:</strong> <a href="https://docs.aws.amazon.com/">AWS Documentation</a></li>
+    </ul>
+</body>
+</html>
