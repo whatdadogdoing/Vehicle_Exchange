@@ -277,13 +277,13 @@ git push origin main
   uses: actions/cache@v3
   with:
     path: ~/.npm
-    key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+    key: runner-os-node-package-lock
 
 - name: Cache Python dependencies
   uses: actions/cache@v3
   with:
     path: ~/.cache/pip
-    key: ${{ runner.os }}-pip-${{ hashFiles('**/requirements.txt') }}
+    key: runner-os-pip-requirements
 ```
 
 ### 4.8 Parallel Execution

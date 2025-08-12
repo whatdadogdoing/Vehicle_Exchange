@@ -1,6 +1,6 @@
 ---
 title: "Enterprise CI/CD Pipeline with AWS"
-date: "`r Sys.Date()`"
+date: "2024-01-12"
 weight: 1
 chapter: false
 pre: "<b>1. </b>"
@@ -34,7 +34,7 @@ In this workshop, you will build a complete enterprise-grade CI/CD pipeline for 
 
 ## Workshop Modules
 
-{{% children showhidden="false" %}}
+<!-- Module navigation will be added here -->
 
 ---
 
@@ -73,9 +73,7 @@ node --version
 python --version
 ```
 
-{{% notice info %}}
-Ensure all tools are properly installed before proceeding to the next module.
-{{% /notice %}}
+> **Info:** Ensure all tools are properly installed before proceeding to the next module.
 
 ---
 
@@ -231,9 +229,7 @@ docker-compose ps
 docker-compose logs -f
 ```
 
-{{% notice tip %}}
-Use `docker-compose` for local development and testing before deploying to AWS.
-{{% /notice %}}
+> **Tip:** Use `docker-compose` for local development and testing before deploying to AWS.
 
 ---
 
@@ -353,9 +349,7 @@ Configure the following secrets in your GitHub repository:
 | `SONAR_TOKEN` | SonarCloud Token | `sqp_1234567890abcdef...` |
 | `SLACK_WEBHOOK_URL` | Slack Notifications | `https://hooks.slack.com/...` |
 
-{{% notice warning %}}
-Never commit secrets to your repository. Always use GitHub Secrets for sensitive information.
-{{% /notice %}}
+> **Warning:** Never commit secrets to your repository. Always use GitHub Secrets for sensitive information.
 
 ---
 
