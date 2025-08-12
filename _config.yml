@@ -1,0 +1,28 @@
+title: Enterprise CI/CD Pipeline Workshop
+description: Build a complete enterprise-grade CI/CD pipeline for a full-stack application using AWS services, GitHub Actions, and modern DevOps practices.
+
+remote_theme: pages-themes/architect@v0.2.0
+plugins:
+- jekyll-remote-theme
+
+markdown: kramdown
+highlighter: rouge
+
+# Site settings
+baseurl: ""
+url: "https://yourusername.github.io"
+
+# Navigation
+navigation:
+  - title: Home
+    url: /
+  - title: Prerequisites
+    url: /prerequisites
+  - title: Modules
+    url: /modules
+
+# Workshop info
+workshop:
+  duration: "4 hours"
+  level: "Intermediate"
+  cost: "~$10 USD"

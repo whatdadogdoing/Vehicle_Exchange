@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enterprise CI/CD Pipeline Workshop</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; max-width: 1200px; margin: 0 auto; padding: 20px; line-height: 1.6; }
+        .notice { padding: 15px; margin: 20px 0; border-left: 4px solid #007acc; background: #f0f8ff; }
+        .warning { border-left-color: #ff6b35; background: #fff5f5; }
+        .tip { border-left-color: #28a745; background: #f0fff4; }
+        pre { background: #f8f9fa; padding: 15px; border-radius: 5px; overflow-x: auto; }
+        code { background: #f1f3f4; padding: 2px 4px; border-radius: 3px; }
+        table { border-collapse: collapse; width: 100%; margin: 20px 0; }
+        th, td { border: 1px solid #ddd; padding: 12px; text-align: left; }
+        th { background: #f8f9fa; }
+        h1, h2, h3 { color: #333; }
+        .module { margin: 40px 0; padding: 20px; border: 1px solid #e1e4e8; border-radius: 8px; }
+    </style>
+</head>
+<body>
+    <h1>Enterprise CI/CD Pipeline Workshop</h1>
+    
+    <div class="notice">
+        <strong>Workshop Overview:</strong> Build a complete enterprise-grade CI/CD pipeline for a full-stack application using AWS services, GitHub Actions, and modern DevOps practices.
+    </div>
+
+    <h2>Quick Deploy Options</h2>
+    
+    <div class="module">
+        <h3>Option 1: GitHub Pages</h3>
+        <ol>
+            <li>Enable GitHub Pages in repository settings</li>
+            <li>Push the deploy-docs.yml workflow</li>
+            <li>Access at: <code>https://yourusername.github.io/repository-name</code></li>
+        </ol>
+    </div>
+
+    <div class="module">
+        <h3>Option 2: AWS S3 Static Website</h3>
+        <pre><code># Create S3 bucket
+aws s3 mb s3://your-workshop-bucket
+
+# Upload files
+aws s3 sync . s3://your-workshop-bucket --exclude "*.git/*"
+
+# Enable static website hosting
+aws s3 website s3://your-workshop-bucket --index-document workshop.html</code></pre>
+    </div>
+
+    <div class="module">
+        <h3>Option 3: Local Hugo Server</h3>
+        <pre><code># Install Hugo
+winget install Hugo.Hugo.Extended
+
+# Create site
+hugo new site workshop
+cd workshop
+mkdir -p content/workshops/enterprise-cicd
+copy ..\aws-fcj-workshop.md content\workshops\enterprise-cicd\_index.md
+
+# Run locally
+hugo server -D</code></pre>
+    </div>
+
+    <div class="tip">
+        <strong>Recommendation:</strong> Use GitHub Pages for public workshops or S3 for internal company documentation.
+    </div>
+
+    <h2>Next Steps</h2>
+    <ol>
+        <li>Choose your deployment method above</li>
+        <li>Configure repository settings if using GitHub Pages</li>
+        <li>Share the workshop URL with participants</li>
+        <li>Monitor usage and gather feedback</li>
+    </ol>
+</body>
+</html>
