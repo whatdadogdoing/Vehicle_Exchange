@@ -3,7 +3,7 @@ name: Deploy Workshop to GitHub Pages
 on:
   push:
     branches: [main]
-    paths: ['index.md', 'modules/**', '_config.yml']
+  workflow_dispatch:
 
 jobs:
   deploy:
