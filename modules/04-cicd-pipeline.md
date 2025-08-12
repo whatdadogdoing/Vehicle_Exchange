@@ -17,6 +17,8 @@ Build a complete enterprise-grade CI/CD pipeline using GitHub Actions with secur
 
 ## Pipeline Architecture
 
+![CI/CD Pipeline Flow](../images/pipeline-flow.png)
+
 ```
 ┌─────────────┐    ┌──────────────┐    ┌─────────────┐    ┌─────────────┐
 │   Code      │───▶│   Security   │───▶│   Testing   │───▶│   Build &   │

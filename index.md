@@ -20,6 +20,8 @@ In this workshop, you will build a complete enterprise-grade CI/CD pipeline for 
 
 ### Architecture Overview
 
+![Workshop Architecture](./images/architecture-overview.png)
+
 ```
 ┌─────────────┐    ┌──────────────┐    ┌─────────────┐
 │   GitHub    │───▶│ GitHub       │───▶│   AWS ECS   │
